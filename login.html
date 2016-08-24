@@ -1,2 +1,65 @@
 <!DOCTYPE html>
 
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <img id="logo" class="standard_logo" src="image001.jpg" border="0" name="logo">
+        <div id="left">
+            <div id="content" style="display: block;">
+                LOG IN AS RESIDENT:
+                <div id="theloginform" style="display:block;">
+                    <form>
+                        <div id="usernamegroup" class="inputgroup">
+                            <label for="username" class="label">Username</label>
+                            <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
+                            <label for="password" class="label">Password</label>
+                            <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
+                            <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="content" style="display: block;">
+                OR, LOG IN AS:
+                <div id="altloginbuttons" style="display:block;" >
+                    <button onclick="dropDown()" class="input r4 wide mb16 mt8">Guest</button>
+                        <div id="communitylist">
+                            <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
+                        </div>
+                    <button>Administrator</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function myFunction() {
+        document.getElementById("communitylist").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
+</body>
+
+
+
+
+
+
+
