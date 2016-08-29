@@ -4,19 +4,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="logo_wrapper" class="standard_logo_wrapper mb24">
+    <div id="logo_wrapper" class="standard_logo_wrapper">
         <h1 style="height: 100%; display: table-cell; vertical-align: bottom;">
             <img id="logo" class="standard_logo" src="image001.jpg" border="0" name="logo">
         </h1>
     </div>
-    <div id="left/right">
-
-        <div id="wrap">
-            <div id="main">
-                <div id="wrapper">
-                    <div id="left">
+    <div id="left_right" class="ma">
+        
+        <div id="left" class="pr8">
+            <div id="wrap">
+                <div id="main">
+                    <div id="wrapper">
                         <div id="content" style="display: block;">
-                            <div id="loginoption" class="mb16">LOG IN AS RESIDENT:</div>
+                            <div class="loginoption mb16">LOG IN AS RESIDENT:</div>
                             <div id="theloginform" style="display:block;">
                                 <form>
                                     <div id="usernamegroup" class="inputgroup">
@@ -24,18 +24,36 @@
                                         <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
                                         <label for="password" class="label">Password</label>
                                         <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
+                                        <div id="pwcaps" class="mb16" style="display:none">
+                                            <img id="pwcapsicon" alt="Caps Lock is on." width="12" src="/img/icon/capslock_blue.png"> 
+                                            Caps Lock is on.
+                                        </div>
                                         <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">
+                                    </div>
+                                    <div class="w0 pr ln3 p16 remember">
+                                        <input type="checkbox" class="r4 fl mr8" style="" id="rememberUn" name="rememberUn">
+                                        <label for="rememberUn" class="fl pr db tn3">Remember me</label><br>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div id="right">
+                    <div id="TermsandConditions" class="loginoption small">
+                        By clicking Log In you agree to our <br>
+                        <a href="https://myerickson.erickson.com/myericksonV1/site/erickson/residentapps/mobile/tou" target="_blank" style="text-decoration: underline">Terms and Conditions.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right" class="pl8">
+            <div id="wrap">
+                <div id="main">
+                    <div id="wrapper">
                         <div id="content" style="display: block;">
-                            <div id="loginoption" class="mb16">OR, LOG IN AS:</div>
+                            <div class="loginoption mb16">OR, LOG IN AS:</div>
                             <div id="altloginform" style="display:block;">
                                 <div class="dropdown">
-                                    <button onclick="displayDropdown()" class="r4 wide mt24 dropbtn">Guest</button>
+                                    <button id="guestButton" onclick="displayDropdown()" class="r4 wide mt24 dropbtn">Guest</button>
                                     <div id="communityList" class="r4 wide dropdown-content">
                                         <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
                                         <a id="guestAccessLink_APL" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/APL">Ashby Ponds</a>
@@ -64,9 +82,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="footer">© 2016 salesforce.com. All rights reserved.</div>
-        </div>
+            </div> 
+        </div> 
+         
     </div>
     <script>
     function displayDropdown() {
