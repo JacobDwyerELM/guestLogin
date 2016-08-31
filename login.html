@@ -22,7 +22,8 @@
                                     <div id="usernamegroup" class="inputgroup">
                                         <label for="username" class="label">Username</label>
                                         <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
-                                        <label for="password" class="label">Password</label>
+                                        <label for="password" class="label fl">Password</label>            
+                                        <a id="forgot_password_link" class="fr small" href="/secur/forgotpassword.jsp?locale=us&amp;lqs=startURL%3D%252Fsetup%252Fsecur%252FRemoteAccessAuthorizationPage.apexp%253Fsource%253DCAAAAVbhGxfKME8wMzEwMDAwMDA0Qzk1AAAAyujKrfWL88do2Qs3hyJ6ApvL1O49MObjcxKLQh7EM_509wEH9nlZNXXSwe2F1V2nv14_4SrXGnBiNFeq1vyXQJAjLQVbC8johh41x2yb_iqdXvZNYRsyYHbZQH19hO65WhqcwB_6_hNUma7jTJnHxF46b9RIh9guDqhgIZ6hZQ5h4rrtpnwRRvVxGioER56M1zK3j_wiKizMLyZYlKPglk8cfFcMhQ1a6U1n5AygVwyiJX3F5FkUKwq_C6Y0aVwPTprGirCzQofuXT4NKBcQ-oLsFvXqDOTxnvl_91uSqFKmBKTDnCMJU6uEKFfcv3qWfVcNSjtvez_qCIbtNNngeuOr6hjAKU8ILmVTsjMaChWYUuWGDS6vlFnoV2VHHvgebgkTnMIq-i1D0fjhMNL2nf13TteKM5WCyPQ229pT2d4TgMJEvH7UgtiRn1QpQmfCGGe01QK02H2gWyORz33ZUX21oEVQj_BbBSM0gQJK2nshQDBj2RjSsVd_HHhw1ofgn0UfMOYmp_JP2d_eFsRZ6BoFJuZoMIJYSgpT_SXYHAtJgKDgsrK108X4Tpez1cUvhyCt5R1OAB67LrqZX6iQObIYa_mbGLDqM8IHPpFdX4gQ%26ec%3D302">Forgot Your Password?</a>
                                         <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
                                         <div id="pwcaps" class="mb16" style="display:none">
                                             <img id="pwcapsicon" alt="Caps Lock is on." width="12" src="/img/icon/capslock_blue.png"> 
@@ -76,8 +77,14 @@
                                         <a id="guestAccessLink_WCD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/WCD">Wind Crest</a>
                                     </div>
                                 </div>
+                                <div class="">
+
+                                </div>
+                                <div id ="employeewrapper">
+                                    <a class="r4 mt24 adminbutton" href="https://sso.erickson.com/adfs/ls/">Employee</a>
+                                </div>
                                 <div class="adminwrapper">
-                                    <button class= "r4 wide mt24 dropbtn">Administrator</button>
+                                    <a class="r4 mt24 adminbutton" href="https://myerickson.erickson.com/myericksonV1/tv/" target="_new">Administrator</a>
                                 </div>
                             </div>
                         </div>
