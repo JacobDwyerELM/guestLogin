@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
     
@@ -55,7 +56,8 @@
                             <div class="loginoption mb16">OR, LOG IN AS:</div>
                             <div id="altloginform" style="display:block;">
                                 <div class="dropdown">
-                                    <button id="dropdownArrow" onclick="displayDropdown()" class="r4 wide mt24 dropbtn">Guest</button>  
+
+                                    <button id="dropdownArrow" onclick="displayDropdown()" class="r4 wide mt24 dropbtn">Guest <i class="fa fa-angle-down fa-fw fr r25 dropiconbtn" style="font-size:16px; font-weight:bold;"></i></button>
                                     <div id="communityList" class="r4 wide dropdown-content">
                                         <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
                                         <a id="guestAccessLink_APL" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/APL">Ashby Ponds</a>
@@ -76,6 +78,7 @@
                                         <a id="guestAccessLink_TCK" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/TCK">Tallgrass Creek</a>
                                         <a id="guestAccessLink_WCD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/WCD">Wind Crest</a>
                                     </div>
+                                    
                                 </div>
                                 <div id ="employeewrapper">
                                     <a class="r4 mt24 adminbutton" href="https://sso.erickson.com/adfs/ls/">Employee</a>
