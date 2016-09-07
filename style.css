@@ -839,8 +839,12 @@ p.large {
     text-align: center;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover, .dropbtn:focus{
     background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 .dropdown {
@@ -874,6 +878,7 @@ p.large {
 
 .show {
 	display:block;
+	border-top: none;
 }
 
 .guest-access-link {

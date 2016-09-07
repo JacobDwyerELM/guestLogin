@@ -57,7 +57,7 @@
                             <div id="altloginform" style="display:block;">
                                 <div class="dropdown">
 
-                                    <button id="dropdownArrow" onclick="displayDropdown()" class="r4 wide mt24 dropbtn">Guest <i class="fa fa-angle-down fa-fw fr r25 dropiconbtn" style="font-size:14px; font-weight:bold;"></i></button>
+                                    <button id="dropdownArrow" class="r4 wide mt24 dropbtn">Guest <i class="fa fa-angle-down fa-fw fr r25 dropiconbtn" style="font-size:14px; font-weight:bold;"></i></button>
                                     <div id="communityList" class="r4 wide dropdown-content">
                                         <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
                                         <a id="guestAccessLink_APL" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/APL">Ashby Ponds</a>
@@ -95,22 +95,4 @@
     </div>
     <script src="f:/guestLogin/baselogin2.js"></script>
     <script src="f:/guestLogin/LoginMarketingSurveyResponse.js"></script>
-    <script>
-    function displayDropdown() {
-        document.getElementById("communityList").classList.toggle("show");
-    }
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-    </script>
 </body>
