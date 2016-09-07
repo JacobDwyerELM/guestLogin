@@ -872,7 +872,13 @@ p.large {
 
 .dropdown a:hover {background-color: #f1f1f1; font-weight: bold;}
 
-.show {display:block;}
+.show {
+	display:block;
+}
+
+.guest-access-link {
+	text-align: center;
+}
 
 /* Login hint chooser */
 
