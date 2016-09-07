@@ -19,15 +19,15 @@
                         <div id="content" style="display: block;">
                             <div class="loginoption mb16">LOG IN AS RESIDENT:</div>
                             <div id="theloginform" style="display:block;">
-                                <form>
+                                <form name="login" method="post" id="login_form" onsubmit="handleLogin();" action="https://ericksonremedyforce.my.salesforce.com/" target="_top" novalidate="novalidate">
                                     <div id="usernamegroup" class="inputgroup">
                                         <label for="username" class="label">Username</label>
                                         <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
                                         <label for="password" class="label fl">Password</label>            
-                                        <a id="forgot_password_link" class="fr small" href="/secur/forgotpassword.jsp?locale=us&amp;lqs=startURL%3D%252Fsetup%252Fsecur%252FRemoteAccessAuthorizationPage.apexp%253Fsource%253DCAAAAVbhGxfKME8wMzEwMDAwMDA0Qzk1AAAAyujKrfWL88do2Qs3hyJ6ApvL1O49MObjcxKLQh7EM_509wEH9nlZNXXSwe2F1V2nv14_4SrXGnBiNFeq1vyXQJAjLQVbC8johh41x2yb_iqdXvZNYRsyYHbZQH19hO65WhqcwB_6_hNUma7jTJnHxF46b9RIh9guDqhgIZ6hZQ5h4rrtpnwRRvVxGioER56M1zK3j_wiKizMLyZYlKPglk8cfFcMhQ1a6U1n5AygVwyiJX3F5FkUKwq_C6Y0aVwPTprGirCzQofuXT4NKBcQ-oLsFvXqDOTxnvl_91uSqFKmBKTDnCMJU6uEKFfcv3qWfVcNSjtvez_qCIbtNNngeuOr6hjAKU8ILmVTsjMaChWYUuWGDS6vlFnoV2VHHvgebgkTnMIq-i1D0fjhMNL2nf13TteKM5WCyPQ229pT2d4TgMJEvH7UgtiRn1QpQmfCGGe01QK02H2gWyORz33ZUX21oEVQj_BbBSM0gQJK2nshQDBj2RjSsVd_HHhw1ofgn0UfMOYmp_JP2d_eFsRZ6BoFJuZoMIJYSgpT_SXYHAtJgKDgsrK108X4Tpez1cUvhyCt5R1OAB67LrqZX6iQObIYa_mbGLDqM8IHPpFdX4gQ%26ec%3D302">Forgot Your Password?</a>
+                                        <a id="forgot_password_link" class="fr small" href="/secur/forgotpassword.jsp?locale=us&amp;lqs=startURL%3D%252Fsetup%252Fsecur%252FRemoteAccessAuthorizationPage.apexp%253Fsource%253DCAAAAVcFDnF3ME8wMzEwMDAwMDA0Qzk1AAAAyk58Ge4Cx6n0NzqlTIwAJeBrTYPnF62JXAFQfvYw75yK5OZ3WUJb59QZCnh5sjY2M9oiOCN2kb44Z9_ExBTG1pk-VukHFcWH_ykBI_Z6vx7cNSiBJuOVzpAo77WRjnaqaMztaiJJEogJrVGL81cmhm4f6wOhfoISSZO-1cqaVCDW8OJP2dBq8GI14tEYaZFyMC9eHdOxGX_V4lCj0itfgfTqsTy-YTzW6Lb_Lpc9UVcXjrP3HnTeu7ylelzeffdoKG58iJQ59ohBFtKAg16Ekxq13KLVftJxS0VZ2OHmf3kRlHI11Tp27dxg7XHocHztaRd3efMCNH8mY59-9dejQswQyc0MeiEvVWLBzKumGSUjooRi-kgVzGoURTxIOiSrQ7JyrPBSxqhzOOR7D2Y0upZ5I8To1OnwxX90gh_xy4xhLVZtMtvT_ax4WOgFX9R53dVGjsa52PnZHKeIHee83wakKYXFrjl4zcNUBFFzXLSXhGa6bISojjF_s6jJvCqIVWkYlbqaUS0BEIvSjAM-UJsD02_HpmGvk7W_EfjpfZ0SY-8IjKPgKHAq4499g_5P15JbbaiJUsqxk5k_mBnT1JFu-b_8YjsHe-yRjVbUgW2A%26ec%3D302">Forgot Your Password?</a>
                                         <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
-                                        <div id="pwcaps" class="mb16" style="display:none">
-                                            <img id="pwcapsicon" alt="Caps Lock is on." width="12" src="/img/icon/capslock_blue.png"> 
+                                        <div id="pwcaps" class="mb14" style="display:none">
+                                            <img id="pwcapsicon" alt="Caps Lock is on." width="12" src="f:/guestLogin/capslock_blue.png"> 
                                             Caps Lock is on.
                                         </div>
                                         <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">
@@ -93,15 +93,15 @@
             </div> 
         </div>   
     </div>
+    <script src="f:/guestLogin/baselogin2.js"></script>
+    <script src="f:/guestLogin/LoginMarketingSurveyResponse.js"></script>
     <script>
     function displayDropdown() {
         document.getElementById("communityList").classList.toggle("show");
     }
-
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
-
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
             for (i = 0; i < dropdowns.length; i++) {
@@ -114,10 +114,3 @@
     }
     </script>
 </body>
-
-
-
-
-
-
-
