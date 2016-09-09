@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ 
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+     
+    <div id="left_right" class="ma">
+        <div id="left" class="pr8">
+            <div id="wrap">
+                <div id="main">
+                    <div id="wrapper">
+                        <div id="logo_wrapper" class="standard_logo_wrapper">
+                            <h1 style="height: 100%; display: table-cell; vertical-align: bottom;">
+                                <img id="logo" class="standard_logo" src="logo.jpg" border="0" name="logo">
+                            </h1>
+                        </div>
+                        <div id="content" style="display: block;">
+                            <div class="loginoption mb16">LOG IN AS RESIDENT:</div>
+                            <div id="theloginform" style="display:block;">
+                                <form name="login" method="post" id="login_form" onsubmit="handleLogin();" action="https://ericksonremedyforce.my.salesforce.com/" target="_top" novalidate="novalidate">
+                                    <div id="usernamegroup" class="inputgroup">
+                                        <label for="username" class="label">Username</label>
+                                        <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
+                                        <label for="password" class="label fl">Password</label>            
+                                        <a id="forgot_password_link" class="fr small" href="/secur/forgotpassword.jsp?locale=us&amp;lqs=startURL%3D%252Fsetup%252Fsecur%252FRemoteAccessAuthorizationPage.apexp%253Fsource%253DCAAAAVcFDnF3ME8wMzEwMDAwMDA0Qzk1AAAAyk58Ge4Cx6n0NzqlTIwAJeBrTYPnF62JXAFQfvYw75yK5OZ3WUJb59QZCnh5sjY2M9oiOCN2kb44Z9_ExBTG1pk-VukHFcWH_ykBI_Z6vx7cNSiBJuOVzpAo77WRjnaqaMztaiJJEogJrVGL81cmhm4f6wOhfoISSZO-1cqaVCDW8OJP2dBq8GI14tEYaZFyMC9eHdOxGX_V4lCj0itfgfTqsTy-YTzW6Lb_Lpc9UVcXjrP3HnTeu7ylelzeffdoKG58iJQ59ohBFtKAg16Ekxq13KLVftJxS0VZ2OHmf3kRlHI11Tp27dxg7XHocHztaRd3efMCNH8mY59-9dejQswQyc0MeiEvVWLBzKumGSUjooRi-kgVzGoURTxIOiSrQ7JyrPBSxqhzOOR7D2Y0upZ5I8To1OnwxX90gh_xy4xhLVZtMtvT_ax4WOgFX9R53dVGjsa52PnZHKeIHee83wakKYXFrjl4zcNUBFFzXLSXhGa6bISojjF_s6jJvCqIVWkYlbqaUS0BEIvSjAM-UJsD02_HpmGvk7W_EfjpfZ0SY-8IjKPgKHAq4499g_5P15JbbaiJUsqxk5k_mBnT1JFu-b_8YjsHe-yRjVbUgW2A%26ec%3D302">Forgot Your Password?</a>
+                                        <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
+                                        <div id="pwcaps" class="mb14" style="display:none">
+                                            <img id="pwcapsicon" alt="Caps Lock is on." width="12" src="f:/guestLogin/capslock_blue.png"> 
+                                            Caps Lock is on.
+                                        </div>
+                                        <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">
+                                    </div>
+                                    <div class="w0 pr ln3 p16 remember">
+                                        <input type="checkbox" class="r4 fl mr8" style="" id="rememberUn" name="rememberUn">
+                                        <label for="rememberUn" class="fl pr db tn3">Remember me</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="TermsandConditions" class="loginoption small">
+                            By clicking Log In you agree to our <br>
+                            <a href="https://myerickson.erickson.com/myericksonV1/site/erickson/residentapps/mobile/tou" target="_blank" style="text-decoration: underline">Terms and Conditions.</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="right" class="pl8">
+            <div id="wrap">
+                <div id="main">
+                    <div id="wrapper">
+                        <div id="content" style="display: block;">
+                            <div class="loginoption mb16">OR, LOG IN AS:</div>
+                            <div id="altloginform" style="display:block;">
+                                <div class="dropdown mt24">
+
+                                    <button id="dropdownArrow" class="r4 wide dropbtn">Guest <i class="fa fa-angle-down fa-fw fr r25 dropiconbtn" style="font-size:14px; font-weight:bold;"></i></button>
+                                    <div id="communityList" class="r4 wide dropdown-content">
+                                        <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
+                                        <a id="guestAccessLink_APL" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/APL">Ashby Ponds</a>
+                                        <a id="guestAccessLink_BBV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/BBV">Brooksby Village</a>
+                                        <a id="guestAccessLink_CCI" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/CCI">Charlestown</a>
+                                        <a id="guestAccessLink_null" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/null">Corporate Office</a>
+                                        <a id="guestAccessLink_DVF" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/DVF">Devonshire</a>
+                                        <a id="guestAccessLink_ETH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ETH">Eagle's Trace</a>
+                                        <a id="guestAccessLink_FRV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/FRV">Fox Run</a>
+                                        <a id="guestAccessLink_GSV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/GSV">Greenspring</a>
+                                        <a id="guestAccessLink_HSD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/HSD">Highland Springs</a>
+                                        <a id="guestAccessLink_LHN" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/LHN">Lantern Hill</a>
+                                        <a id="guestAccessLink_LPH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/LPH">Linden Ponds</a>
+                                        <a id="guestAccessLink_MGC" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/MGC">Maris Grove</a>
+                                        <a id="guestAccessLink_OCV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/OCV">Oak Crest</a>
+                                        <a id="guestAccessLink_RWV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/RWV">Riderwood</a>
+                                        <a id="guestAccessLink_SBV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/SBV">Seabrook</a>
+                                        <a id="guestAccessLink_TCK" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/TCK">Tallgrass Creek</a>
+                                        <a id="guestAccessLink_WCD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/WCD">Wind Crest</a>
+                                    </div>
+                                    
+                                </div>
+                                <div id ="employeewrapper">
+                                    <a class="r4 mt24 adminbutton" href="https://sso.erickson.com/adfs/ls/">Employee</a>
+                                </div>
+                                <div class="adminwrapper">
+                                    <a class="r4 mt24 adminbutton" href="https://myerickson.erickson.com/myericksonV1/tv/" target="_new">Administrator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+    </div>
+    <script src="f:/guestLogin/baselogin2.js"></script>
+    <script src="f:/guestLogin/LoginMarketingSurveyResponse.js"></script>
+</body> 
