@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="visibility: visible;">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0"/>
+        <meta name="description" content="Salesforce Customer Secure Login Page. Login to your Salesforce Customer Account."/>
+        <title>Login | Salesforce</title>
+        <meta name="format-detection" content="telephone=no"/>
+        <link rel="stylesheet" type="text/css" href="/guestLogin/css/sfdc_198.css"/>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <style type="text/css">
+            html {
+                visibility: hidden;
+            }
+
+            a {
+                color: #0070d2;
+            }
+
+            body {
+                background-color: #fff;
+            }
+
+            #content,.container {
+                background-color: #ffffff;
+            }
+
+            #header {
+                color: #16325c;
+            }
+
+            #header,#footer {
+                color: #000000;
+            }
+
+            #signup {
+                color: #000000;
+            }
+
+            #or_use_idp {
+                color: #000000;
+            }
+
+            body {
+                display: table;
+                width: 100%;
+            }
+
+            #wrap {
+                height: 100%;
+            }
+        </style>
+        <style type="text/css">
+            html {
+                visibility: hidden;
+            }
+        </style>
+        <script type="text/javascript">
+            if (self == top) {document.documentElement.style.visibility = 'visible';} else {document.write = ''; top.location = self.location; setTimeout(function(){document.body.innerHTML='';}, 1);window.self.onload=function(evt){document.body.innerHTML='';};}
+        </script>
+        <script>
+            var SFDCSessionVars = {
+                "server": "https://login.salesforce.com/login/sessionserver202.html",
+                "im": true,
+                "ah": "active",
+                "save": "Save",
+                "saveOne": "Save 1 Change",
+                "sum": "#p# Saved Usernames",
+                "iaac": false,
+                "hac": "Choose a Username",
+                "suo": "1 Saved Username",
+                "title": " | Salesforce",
+                "saveMany": "Save #p# Changes",
+                "lpt": "Login",
+                "host": "login.salesforce.com",
+                "le": false,
+                "heu": "Edit Username List",
+                "ic": false,
+                "lh": false,
+                "ur": "https://ericksonremedyforce.my.salesforce.com",
+                "hidp": "Log In Using",
+                "ih": "inactive",
+                "dc": "Username removed. Click Save to Commit Changes."
+            };
+        </script>
+        <script src="/guestLogin/jslibrary/SfdcSessionBase202.js"></script>
+        <script src="/guestLogin/jslibrary/LoginHint202.js"></script>
+        <script>
+            LoginHint.hideLoginForm();
+        </script>
+        <link rel="canonical" href="https://ericksonremedyforce.my.salesforce.com?locale=us"/>
+    </head>
+    <body onload="lazyload();">
+        <div id="left_right" class="ma">
+            <div id="left" class="pr8">
+                <div id="wrap">
+                    <div id="main">
+                        <div id="wrapper">
+                            <div id="logo_wrapper" class="standard_logo_wrapper">
+                                <h1 style="height: 100%; display: table-cell; vertical-align: bottom;">
+                                    <img id="logo" class="standard_logo" src="https://na25.salesforce.com/brand-asset/CAAAAVcgpC07AAAAAAAAAAAAAAAAAAAAAAAAyq97ZIOyi5JbO66dT1LaIiZqv98s4ibClO_sNjhiS9DAda80vGNgIGcJMpPhym_dG6ajGZpCd2h-aAWfLSA-qKEnl8A2SwePRoNJvTfH44Cw" border="0" name="logo">
+                                </h1>
+                            </div>
+                            <div id="content">
+                                <div class="loginoption mb16">LOG IN AS RESIDENT:</div>
+                                <div id="chooser" style="display: none">
+                                    <div class="loginError" id="chooser_error" style="display:none;"></div>
+                                    <div>
+                                        <span id="chooser_label" class="label"></span>
+                                        <a href="javascript:void(0);" id="edit" class="fr small" onclick="LoginHint.showEdit();">Edit List</a>
+                                    </div>
+                                    <div class="scrollable mt8">
+                                        <ul id="idlist"></ul>
+                                    </div>
+                                </div>
+                                <div id="manager" style="display: none">
+                                    <div class="nonscrollable mt8">
+                                        <ul id="editlist" class="mb24" aria-live="polite" aria-relevant="additions removals"></ul>
+                                    </div>
+                                    <div class="mt16">
+                                        <button class="button primary fiftyfifty right" id="hint_save_edit" name="Save" onclick="LoginHint.saveHintEdit();">Save</button>
+                                        <button class="button secondary fiftyfifty" id="hint_back_edit" name="Cancel" onclick="LoginHint.showChooser();">Cancel</button>
+                                    </div>
+                                </div>
+                                <div id="theloginform">
+                                    <form name="login" method="post" id="login_form" onsubmit="handleLogin();" action="https://ericksonremedyforce.my.salesforce.com/" target="_top" novalidate="novalidate">
+                                        <input type="hidden" id="pqs" name="pqs" value="?startURL=%2Fsetup%2Fsecur%2FRemoteAccessAuthorizationPage.apexp%3Fsource%3DCAAAAVcfWpRLME8wMzEwMDAwMDA0Qzk1AAAAykmiEE29egMCv4lvQJJhKDGxsjTSNDQO1ioe9L4ybaIwcU-ht2GEyYtwcFi5qIwmPLpOXlgSBNTS8mZwR_bq-Eu8O2UuXvPOoQNZJR8xzvZdWl7Z2Vq0BdCxzznWbC3xcFD7qf7GZqANXJoM7GgTT0PA-x1yle-rENdk_CcQqGUcjVi_ml0ggYE_foGQZ0bQuRC8oYTAOcG2YsRgMYE_KX0QaJFD08ZstqsvtIxM7HCngBvYm-3VlVNcddcoudrr2AppKhpTubWy79yls9PglaDspOEPjxnUmQLBSp1RxpBgHZwzJEnoqcWmGh846Evbh06hBff772gy0CzuF6stFNEZdWUGANfNrd4om4HelesLbh5Gni5fuQq7Xe8Bds2fQcy0N3h4A-GqC-r569RBu-97tsztuhRPzd6xIZfzWTKqc98RLVk_mOld4T6V-cL8luQ5S4im9rBxNT8R8_Med8mWOoB6Un6MI8ArfhZs99JhYyw5-2Y1g_7GATYpHF1qKGDOdCh4pcK6gyzHa9wYUj2XnrWBMcFH1LeCkhjpFlL78tUWwlHxT5gg8jXEpNtR33slbZ3myoXL809AJWTHuLOttvhEnqU2wEAx__TvLXBl&amp;ec=302"/>
+                                        <fieldset style="display:none">
+                                            <input type="hidden" name="un" value=""/>
+                                            <input type="hidden" name="width" value=""/>
+                                            <input type="hidden" name="height" value=""/>
+                                            <input type="hidden" name="hasRememberUn" value="true"/>
+                                            <input type="hidden" id="login_startUrl" name="startURL" value="/setup/secur/RemoteAccessAuthorizationPage.apexp?source=CAAAAVcfWpRLME8wMzEwMDAwMDA0Qzk1AAAAykmiEE29egMCv4lvQJJhKDGxsjTSNDQO1ioe9L4ybaIwcU-ht2GEyYtwcFi5qIwmPLpOXlgSBNTS8mZwR_bq-Eu8O2UuXvPOoQNZJR8xzvZdWl7Z2Vq0BdCxzznWbC3xcFD7qf7GZqANXJoM7GgTT0PA-x1yle-rENdk_CcQqGUcjVi_ml0ggYE_foGQZ0bQuRC8oYTAOcG2YsRgMYE_KX0QaJFD08ZstqsvtIxM7HCngBvYm-3VlVNcddcoudrr2AppKhpTubWy79yls9PglaDspOEPjxnUmQLBSp1RxpBgHZwzJEnoqcWmGh846Evbh06hBff772gy0CzuF6stFNEZdWUGANfNrd4om4HelesLbh5Gni5fuQq7Xe8Bds2fQcy0N3h4A-GqC-r569RBu-97tsztuhRPzd6xIZfzWTKqc98RLVk_mOld4T6V-cL8luQ5S4im9rBxNT8R8_Med8mWOoB6Un6MI8ArfhZs99JhYyw5-2Y1g_7GATYpHF1qKGDOdCh4pcK6gyzHa9wYUj2XnrWBMcFH1LeCkhjpFlL78tUWwlHxT5gg8jXEpNtR33slbZ3myoXL809AJWTHuLOttvhEnqU2wEAx__TvLXBl"/>
+                                            <input type="hidden" name="loginURL" value=""/>
+                                            <input type="hidden" name="loginType" value="6"/>
+                                            <input type="hidden" name="useSecure" value="true"/>
+                                            <input type="hidden" name="local" value=""/>
+                                            <input type="hidden" name="lt" value="OAUTH"/>
+                                            <input type="hidden" name="qs" value="r=https%3A%2F%2Fericksonremedyforce.my.salesforce.com%2Fsetup%2Fsecur%2FRemoteAccessAuthorizationPage.apexp%3Fsource%3DCAAAAVcfWpRLME8wMzEwMDAwMDA0Qzk1AAAAykmiEE29egMCv4lvQJJhKDGxsjTSNDQO1ioe9L4ybaIwcU-ht2GEyYtwcFi5qIwmPLpOXlgSBNTS8mZwR_bq-Eu8O2UuXvPOoQNZJR8xzvZdWl7Z2Vq0BdCxzznWbC3xcFD7qf7GZqANXJoM7GgTT0PA-x1yle-rENdk_CcQqGUcjVi_ml0ggYE_foGQZ0bQuRC8oYTAOcG2YsRgMYE_KX0QaJFD08ZstqsvtIxM7HCngBvYm-3VlVNcddcoudrr2AppKhpTubWy79yls9PglaDspOEPjxnUmQLBSp1RxpBgHZwzJEnoqcWmGh846Evbh06hBff772gy0CzuF6stFNEZdWUGANfNrd4om4HelesLbh5Gni5fuQq7Xe8Bds2fQcy0N3h4A-GqC-r569RBu-97tsztuhRPzd6xIZfzWTKqc98RLVk_mOld4T6V-cL8luQ5S4im9rBxNT8R8_Med8mWOoB6Un6MI8ArfhZs99JhYyw5-2Y1g_7GATYpHF1qKGDOdCh4pcK6gyzHa9wYUj2XnrWBMcFH1LeCkhjpFlL78tUWwlHxT5gg8jXEpNtR33slbZ3myoXL809AJWTHuLOttvhEnqU2wEAx__TvLXBl"/>
+                                            <input type="hidden" name="locale" value=""/>
+                                            <input type="hidden" name="oauth_token" value=""/>
+                                            <input type="hidden" name="oauth_callback" value=""/>
+                                            <input type="hidden" name="login" value=""/>
+                                            <input type="hidden" name="serverid" value=""/>
+                                            <input type="hidden" name="display" value="page"/>
+                                        </fieldset>
+                                        <div id="usernamegroup" class="inputgroup">
+                                            <label for="username" class="label">Username</label>
+                                            <div id="username_container">
+                                                <div id="idcard-container" class="mt8 mb16" style="display: none">
+                                                    <div id="idcard">
+                                                        <img id="idcard-avatar" class="avatar" alt="">
+                                                        <a href="javascript:void(0);" id="clear_link" class="clearlink" onclick="LoginHint.clearExistingIdentity();">
+                                                            <img alt="Log In with a Different Username" class="clearicon" src="/guestLogin/img/clear.png">
+                                                        </a>
+                                                        <span id="idcard-identity"></span>
+                                                    </div>
+                                                </div>
+                                                <input class="input r4 wide mb16 mt8 username" type="email" value="lhndemo@erickson.com" name="username" id="username">
+                                            </div>
+                                        </div>
+                                        <label for="password" class="label fl">Password</label>
+                                        <a id="forgot_password_link" class="fr small" href="/secur/forgotpassword.jsp?locale=us&lqs=startURL%3D%252Fsetup%252Fsecur%252FRemoteAccessAuthorizationPage.apexp%253Fsource%253DCAAAAVcfWpRLME8wMzEwMDAwMDA0Qzk1AAAAykmiEE29egMCv4lvQJJhKDGxsjTSNDQO1ioe9L4ybaIwcU-ht2GEyYtwcFi5qIwmPLpOXlgSBNTS8mZwR_bq-Eu8O2UuXvPOoQNZJR8xzvZdWl7Z2Vq0BdCxzznWbC3xcFD7qf7GZqANXJoM7GgTT0PA-x1yle-rENdk_CcQqGUcjVi_ml0ggYE_foGQZ0bQuRC8oYTAOcG2YsRgMYE_KX0QaJFD08ZstqsvtIxM7HCngBvYm-3VlVNcddcoudrr2AppKhpTubWy79yls9PglaDspOEPjxnUmQLBSp1RxpBgHZwzJEnoqcWmGh846Evbh06hBff772gy0CzuF6stFNEZdWUGANfNrd4om4HelesLbh5Gni5fuQq7Xe8Bds2fQcy0N3h4A-GqC-r569RBu-97tsztuhRPzd6xIZfzWTKqc98RLVk_mOld4T6V-cL8luQ5S4im9rBxNT8R8_Med8mWOoB6Un6MI8ArfhZs99JhYyw5-2Y1g_7GATYpHF1qKGDOdCh4pcK6gyzHa9wYUj2XnrWBMcFH1LeCkhjpFlL78tUWwlHxT5gg8jXEpNtR33slbZ3myoXL809AJWTHuLOttvhEnqU2wEAx__TvLXBl%26ec%3D302">Forgot Your Password?</a>
+                                        <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off"/>
+                                        <div id="pwcaps" class="mb16" style="display:none">
+                                            <img id="pwcapsicon" alt="Caps Lock is on." width="12"/>Caps Lock is on.
+                                        </div>
+                                        <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In"/>
+                                        <div class="w0 pr ln3 p16 remember">
+                                            <input type="checkbox" class="r4 fl mr8" style="" id="rememberUn" name="rememberUn" checked="checked">
+                                            <label for="rememberUn" class="fl pr db tn3">Remember me</label>
+                                            <br>
+                                        </div>
+                                    </form>
+                                    <div class="w0 links bt pt16 mb20">
+                                        
+                                    </div>
+                                </div>
+                                <div id="mydomainContainer" style="display:none;">
+                                    <p class="mb16">To go to your company's login page, enter the custom domain name.</p>
+                                    <form onsubmit="DomainSwitcher.handleMyDomain();return false;">
+                                        <label for="mydomain" class="label">Custom Domain</label>
+                                        <input type="text" class="input wide focus mt8 mb16" name="mydomain" id="mydomain" onkeyup="DomainSwitcher.updateMyDomain(this, event);"/>
+                                        <div id="mydomain_preview" class="mb16 wordwrap">
+                https://<em>domain</em>
+                .my.salesforce.com
+                                        </div>
+                                    </form>
+                                    <input type="hidden" id="mydomain_suffix" value=".my.salesforce.com"/>
+                                    <input type="hidden" id="community_suffix" value=".na25.force.com"/>
+                                    <button class="button primary fiftyfifty right" id="mydomainContinue" name="Continue" onclick="DomainSwitcher.handleMyDomain();">Continue</button>
+                                    <button class="button secondary fiftyfifty" id="hint_back_domain" onclick="DomainSwitcher.dismissCustomDomain('Login',' | Salesforce');">Back</button>
+                                </div>
+                            </div>
+                            <div id="TermsandConditions" class="loginoption small">
+                                By clicking Log In you agree to our <br>
+                                <a href="https://myerickson.erickson.com/myericksonV1/site/erickson/residentapps/mobile/tou" target="_blank" style="text-decoration: underline">Terms and Conditions.</a>
+                            </div>
+                            <div class="tc" id="use_new_identity_div" style="display:none;">
+                                <a id="use_new_identity" href="javascript:void(0);" onclick="LoginHint.useNewIdentity();">Log In with a Different Username</a>
+                            </div>
+                            <div id="idp_hint_section" style="display:none;">
+                                <div id="idp_hint"></div>
+                                <div id="cancel_idp_hint_div" class="tc">
+                                    <a id="cancel_idp_hint" href="javascript:void(0);" onclick="IdpOptions.clearIdpHint(false); LoginHint.getSavedIdentities(false);">Log In with a Different Account</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right" class="pl8">
+                <div id="wrap">
+                    <div id="main">
+                        <div id="wrapper">
+                            <div id="content" style="display: block;">
+                                <div class="loginoption mb16">OR, LOG IN AS:</div>
+                                <div id="altloginform" style="display:block;">
+                                    <div class="dropdown mt24">
+
+                                        <button id="dropdownArrow" class="r4 wide dropbtn">Guest <i class="fa fa-angle-down fa-fw fr r25 dropiconbtn" style="font-size:14px; font-weight:bold;"></i></button>
+                                        <div id="communityList" class="r4 wide dropdown-content">
+                                            <a id="guestAccessLink_ACH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ACH">Ann's Choice</a>
+                                            <a id="guestAccessLink_APL" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/APL">Ashby Ponds</a>
+                                            <a id="guestAccessLink_BBV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/BBV">Brooksby Village</a>
+                                            <a id="guestAccessLink_CCI" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/CCI">Charlestown</a>
+                                            <a id="guestAccessLink_null" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/null">Corporate Office</a>
+                                            <a id="guestAccessLink_DVF" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/DVF">Devonshire</a>
+                                            <a id="guestAccessLink_ETH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/ETH">Eagle's Trace</a>
+                                            <a id="guestAccessLink_FRV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/FRV">Fox Run</a>
+                                            <a id="guestAccessLink_GSV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/GSV">Greenspring</a>
+                                            <a id="guestAccessLink_HSD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/HSD">Highland Springs</a>
+                                            <a id="guestAccessLink_LHN" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/LHN">Lantern Hill</a>
+                                            <a id="guestAccessLink_LPH" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/LPH">Linden Ponds</a>
+                                            <a id="guestAccessLink_MGC" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/MGC">Maris Grove</a>
+                                            <a id="guestAccessLink_OCV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/OCV">Oak Crest</a>
+                                            <a id="guestAccessLink_RWV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/RWV">Riderwood</a>
+                                            <a id="guestAccessLink_SBV" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/SBV">Seabrook</a>
+                                            <a id="guestAccessLink_TCK" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/TCK">Tallgrass Creek</a>
+                                            <a id="guestAccessLink_WCD" class="guest-access-link" href="https://ericksonqa.touchtown.us/guest/WCD">Wind Crest</a>
+                                        </div>
+                                    
+                                    </div>
+                                    <div id ="employeewrapper">
+                                        <a class="r4 mt24 adminbutton" href="https://sso.erickson.com/adfs/ls/">Employee</a>
+                                    </div>
+                                    <div class="adminwrapper">
+                                        <a class="r4 mt24 adminbutton" href="https://myerickson.erickson.com/myericksonV1/tv/" target="_new">Administrator</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+        <div aria-live="polite" aria-atomic="true" class="zen-assistiveText" style="width:0px;height:0px;" id="assistive-announce">Login
+        </div>
+        <script>
+            LoginHint.getSavedIdentities(false);
+        </script>
+        <script src="/guestLogin/jslibrary/baselogin2.js"></script>
+        <script src="/guestLogin/jslibrary/LoginMarketingSurveyResponse.js"></script>
+        <script>
+            function handleLogin() {
+                document.login.un.value = document.login.username.value;
+                document.login.width.value = screen.width;
+                document.login.height.value = screen.height;
+            }
+            function lazyload() {
+                document.getElementById("pwcapsicon").src = "/guestLogin/img/icon/capslock_blue.png";
+            }
+            loader();
+        </script>
+    </body>
+</html>
